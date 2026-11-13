@@ -6,6 +6,8 @@ L40S, H100 PCIe, B200; RunPod list 2026-11-12 otherwise). Headline cell: batch 3
 prompt ~2048, output 256, utilization 0.6. Full grid in results/floors.csv; sensitivity
 in results/summary_u30.csv and summary_u90.csv.
 
+![Figure 1](results/figure1.svg)
+
 ## Statement 1. Two of four Llama 3.1 8B sellers price below the rented-GPU cost floor. H1 falsified.
 
 | seller | quant | $/M at mix | margin vs cheapest floor (MI300X, $0.070) | what it would take |

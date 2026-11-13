@@ -9,9 +9,16 @@ Phase 1 headline: two of four Llama 3.1 8B sellers price below the cost floor of
 GPUs at any batch size. Their prices are consistent only with owned hardware amortized at
 roughly $0.75 to $1.00 per GPU-hour.
 
+![Figure 1: seller asking prices against measured cost-floor bands per silicon](results/figure1.svg)
+
+*Bands: cost floor on a rented GPU at the headline cell (batch 32, 2048:256 mix) from 90% utilization
+(left edge) to 30% (right edge), bar at 60%. Dots: sellers at the same mix. Red: below every floor at 90%.
+GPU rates and their provenance are labeled on each band. `python figure.py` regenerates it.*
+
 ```
 python margin.py              # results/floors.csv, margins.csv, summary.csv
 python margin.py --u 0.9      # utilization sensitivity
+python figure.py              # results/figure1.svg
 ```
 
 `prices.yaml` holds every GPU rate with provenance (paid billing export or dated list price).
