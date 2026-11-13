@@ -1,0 +1,9 @@
+model,provider,model_raw,quantization,input_per_m,output_per_m,seller_usd_per_m_at_mix,floor_cheapest_silicon,floor_usd_per_m,implied_margin_vs_cheapest,floor_dearest_silicon,implied_margin_vs_dearest,below_floor_u90,breakeven_batch_on_cheapest_silicon,breakeven_extrapolated,breakeven_gpu_rate_at_b32,read_at
+llama3-8b,deepinfra,meta-llama/llama-3.1-8b-instruct,fp8,0.02,0.04,0.0222,mi300x,0.0705,-2.173,h100-sxm,-9.166,True,never (price below per-sequence asymptote),True,0.74,2026-11-13T00:25:31Z
+llama3-8b,groq,meta-llama/llama-3.1-8b-instruct,unknown,0.05,0.08,0.0533,mi300x,0.0705,-0.322,h100-sxm,-3.236,False,312.0,True,1.78,2026-11-13T00:25:31Z
+llama3-8b,cloudflare,meta-llama/llama-3.1-8b-instruct,fp8,0.152,0.287,0.167,mi300x,0.0705,0.578,h100-sxm,-0.353,False,,,,2026-11-13T00:25:31Z
+llama3-8b,coreweave,meta-llama/llama-3.1-8b-instruct,bf16,0.22,0.22,0.22,mi300x,0.0705,0.68,h100-sxm,-0.027,False,,,,2026-11-13T00:25:31Z
+qwen3-30b-a3b,dekallm,qwen/qwen3-30b-a3b-instruct-2507,unknown,0.09,0.3,0.1133,a100-80g,0.0945,0.166,a100-80g,0.159,False,,,,2026-11-13T00:26:12Z
+qwen3-30b-a3b,siliconflow,qwen/qwen3-30b-a3b-instruct-2507,fp8,0.09,0.3,0.1133,a100-80g,0.0945,0.166,a100-80g,0.159,False,,,,2026-11-13T00:26:12Z
+qwen3-30b-a3b,nebius,qwen/qwen3-30b-a3b-instruct-2507,fp8,0.1,0.3,0.1222,a100-80g,0.0945,0.227,a100-80g,0.22,False,,,,2026-11-13T00:26:12Z
+qwen3-30b-a3b,deepinfra,qwen/qwen3-30b-a3b,fp8,0.12,0.5,0.1622,a100-80g,0.0945,0.417,a100-80g,0.413,False,,,,2026-11-13T00:26:11Z

@@ -1,0 +1,15 @@
+tokenprice read_at 2026-11-13T00:24:58Z; u=0.6; batch=32; headline mix P~2048 O=256
+
+llama3-8b: 4 sellers  price $0.022 / $0.110 / $0.220 per M (min/med/max)  floor $0.070 (mi300x) to $0.226 (h100-sxm)
+   price spread 9.9x vs floor spread 3.2x; median margin vs cheapest floor 36%  H1 below-floor:True  H2:True  H3:False
+qwen3-30b-a3b: 4 sellers  price $0.113 / $0.118 / $0.162 per M (min/med/max)  floor $0.095 (a100-80g) to $0.095 (a100-80g)
+   price spread 1.43x vs floor spread 1.01x; median margin vs cheapest floor 20%  H1 below-floor:False  H2:True  H3:False
+
+  llama3-8b      deepinfra    fp8   $0.022/M  margin  -217% vs mi300x   -917% vs h100-sxm   breakeven: batch never (price below per-sequence asymptote) (extrapolated) or $0.74/hr at B=32
+  llama3-8b      groq         unknown $0.053/M  margin   -32% vs mi300x   -324% vs h100-sxm   breakeven: batch 312.0 (extrapolated) or $1.78/hr at B=32
+  llama3-8b      cloudflare   fp8   $0.167/M  margin    58% vs mi300x    -35% vs h100-sxm
+  llama3-8b      coreweave    bf16  $0.220/M  margin    68% vs mi300x     -3% vs h100-sxm
+  qwen3-30b-a3b  dekallm      unknown $0.113/M  margin    17% vs a100-80g     16% vs a100-80g
+  qwen3-30b-a3b  siliconflow  fp8   $0.113/M  margin    17% vs a100-80g     16% vs a100-80g
+  qwen3-30b-a3b  nebius       fp8   $0.122/M  margin    23% vs a100-80g     22% vs a100-80g
+  qwen3-30b-a3b  deepinfra    fp8   $0.162/M  margin    42% vs a100-80g     41% vs a100-80g

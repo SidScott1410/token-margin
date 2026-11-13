@@ -1,0 +1,17 @@
+# GPU hourly rates used as the cost-floor denominator. Every entry carries provenance.
+#   manual: computed from a paid RunPod billing export (Amount / Time billed), July 2026
+#   page:   RunPod console list price, read 2026-11-12, Secure Cloud, on-demand
+# The reckon measurements in data/ were taken on RunPod pods in July 2026, so the
+# manual rates and the timing data share a date. List rates are for silicon not rented.
+unit: usd_per_gpu_hour
+rates:
+  l40s:       {rate: 0.98, provenance: manual, as_of: 2026-07-07, source: runpod-billing-gpu-daily-2026-06-01_2026-11-12.csv, note: "0.65/2386s and 2.398/8807s, both 0.98"}
+  h100-pcie:  {rate: 2.86, provenance: manual, as_of: 2026-07-07, source: runpod-billing-gpu-daily-2026-06-01_2026-11-12.csv, note: "3.376/4247s"}
+  b200:       {rate: 5.84, provenance: manual, as_of: 2026-07-09, source: runpod-billing-gpu-daily-2026-06-01_2026-11-12.csv, note: "three days, 5.83 to 5.84; list on 2026-11-12 was 7.99"}
+  h100-sxm:   {rate: 4.39, provenance: page,   as_of: 2026-11-12, source: https://console.runpod.io/deploy}
+  a100-80g:   {rate: 2.09, provenance: page,   as_of: 2026-11-12, source: https://console.runpod.io/deploy, note: "A100 PCIe; SXM is 2.19. Corpus does not record which."}
+  mi300x:     {rate: 2.39, provenance: page,   as_of: 2026-11-12, source: https://console.runpod.io/deploy}
+list_2026_11_12:   # for drift reporting against the manual rates
+  l40s: 1.09
+  h100-pcie: 2.89
+  b200: 7.99
